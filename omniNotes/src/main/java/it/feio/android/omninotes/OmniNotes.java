@@ -94,7 +94,7 @@ public class OmniNotes extends MultiDexApplication {
 		mContext = getApplicationContext();
 		prefs = getSharedPreferences(Constants.PREFS_NAME, MODE_MULTI_PROCESS);
 
-		enableStrictMode();
+//		enableStrictMode();
 
 		new NotificationsHelper(this).initNotificationChannels();
 	}
