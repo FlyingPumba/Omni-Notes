@@ -27,6 +27,8 @@ buildscript {
     }
     // Exclude the version that the android plugin depends on.
     configurations.classpath.exclude group: 'com.android.tools.external.lombok'
+
+    configurations.all { exclude module: 'groovy-all' }
 }
 
 allprojects {
