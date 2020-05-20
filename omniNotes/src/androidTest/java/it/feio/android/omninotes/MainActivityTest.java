@@ -2,20 +2,20 @@ package it.feio.android.omninotes;
 
 import android.Manifest;
 import android.os.SystemClock;
-import android.support.test.espresso.Espresso;
-import android.support.test.espresso.ViewAction;
-import android.support.test.espresso.ViewInteraction;
-import android.support.test.espresso.action.CoordinatesProvider;
-import android.support.test.espresso.action.GeneralLocation;
-import android.support.test.espresso.action.GeneralSwipeAction;
-import android.support.test.espresso.action.Press;
-import android.support.test.espresso.action.Swipe;
-import android.support.test.espresso.action.Tap;
-import android.support.test.espresso.action.ViewActions;
-import android.support.test.filters.LargeTest;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.rule.GrantPermissionRule;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.espresso.Espresso;
+import androidx.test.espresso.ViewAction;
+import androidx.test.espresso.ViewInteraction;
+import androidx.test.espresso.action.CoordinatesProvider;
+import androidx.test.espresso.action.GeneralLocation;
+import androidx.test.espresso.action.GeneralSwipeAction;
+import androidx.test.espresso.action.Press;
+import androidx.test.espresso.action.Swipe;
+import androidx.test.espresso.action.Tap;
+import androidx.test.espresso.action.ViewActions;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
+import androidx.test.rule.GrantPermissionRule;
+import androidx.test.runner.AndroidJUnit4;
 import android.view.InputDevice;
 import android.view.MotionEvent;
 import android.view.View;
@@ -27,15 +27,15 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.replaceText;
-import static android.support.test.espresso.matcher.ViewMatchers.hasDescendant;
-import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA;
-import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
-import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static android.support.test.espresso.matcher.ViewMatchers.withHint;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.matcher.ViewMatchers.hasDescendant;
+import static androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA;
+import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
+import static androidx.test.espresso.matcher.ViewMatchers.withHint;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static it.feio.android.omninotes.IsEqualTrimmingAndIgnoringCase.equalToTrimmingAndIgnoringCase;
 import static it.feio.android.omninotes.VisibleViewMatcher.isVisible;
 import static org.hamcrest.Matchers.allOf;
@@ -311,20 +311,20 @@ public class MainActivityTest {
                     allOf(withId(R.id.toolbar), isDescendantOfA(withId(R.id.drawer_layout))))));
     android_widget_TextView3.perform(getClickAction());
 
-    ViewInteraction android_widget_TextView4 =
-        onView(
-            allOf(
-                withId(R.id.sketch),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("Sketch")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(
-                        withId(R.id.attachment_dialog_root),
-                        isDescendantOfA(
-                            allOf(
-                                withId(R.id.customViewFrame),
-                                isDescendantOfA(withId(R.id.root))))))));
-    android_widget_TextView4.perform(getClickAction());
+//    ViewInteraction android_widget_TextView4 =
+//        onView(
+//            allOf(
+//                withId(R.id.sketch),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("Sketch")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(
+//                        withId(R.id.attachment_dialog_root),
+//                        isDescendantOfA(
+//                            allOf(
+//                                withId(R.id.customViewFrame),
+//                                isDescendantOfA(withId(R.id.root))))))));
+//    android_widget_TextView4.perform(getClickAction());
 
     ViewInteraction android_widget_ImageView5 =
         onView(
@@ -354,109 +354,109 @@ public class MainActivityTest {
                     allOf(withId(R.id.toolbar), isDescendantOfA(withId(R.id.drawer_layout))))));
     android_widget_TextView5.perform(getClickAction());
 
-    ViewInteraction android_widget_TextView6 =
-        onView(
-            allOf(
-                withId(R.id.recording),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("Record")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(
-                        withId(R.id.attachment_dialog_root),
-                        isDescendantOfA(
-                            allOf(
-                                withId(R.id.customViewFrame),
-                                isDescendantOfA(withId(R.id.root))))))));
-    android_widget_TextView6.perform(getClickAction());
-
-    ViewInteraction android_widget_TextView7 =
-        onView(
-            allOf(
-                withId(R.id.timestamp),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("Timestamp")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(
-                        withId(R.id.attachment_dialog_root),
-                        isDescendantOfA(
-                            allOf(
-                                withId(R.id.customViewFrame),
-                                isDescendantOfA(withId(R.id.root))))))));
-    android_widget_TextView7.perform(getClickAction());
-
-    ViewInteraction android_widget_TextView8 =
-        onView(
-            allOf(
-                withId(R.id.location),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("Location")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(
-                        withId(R.id.attachment_dialog_root),
-                        isDescendantOfA(
-                            allOf(
-                                withId(R.id.customViewFrame),
-                                isDescendantOfA(withId(R.id.root))))))));
-    android_widget_TextView8.perform(getClickAction());
-
-    ViewInteraction android_widget_EditText3 =
-        onView(
-            allOf(
-                withId(R.id.auto_complete_location),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("Search location")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(withId(R.id.customViewFrame), isDescendantOfA(withId(R.id.root))))));
-    android_widget_EditText3.perform(replaceText("reperusal"));
-
-    ViewInteraction android_widget_EditText4 =
-        onView(
-            allOf(
-                withId(R.id.auto_complete_location),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("reperusal")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(withId(R.id.customViewFrame), isDescendantOfA(withId(R.id.root))))));
-    android_widget_EditText4.perform(replaceText("dozen"));
-
-    ViewInteraction android_widget_TextView9 =
-        onView(
-            allOf(
-                withId(R.id.buttonDefaultPositive),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("CONFIRM")),
-                isVisible(),
-                isDescendantOfA(withId(R.id.root))));
-    android_widget_TextView9.perform(getClickAction());
-
-    ViewInteraction android_widget_TextView10 =
-        onView(
-            allOf(
-                withId(R.id.timestamp),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("Timestamp")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(
-                        withId(R.id.attachment_dialog_root),
-                        isDescendantOfA(
-                            allOf(
-                                withId(R.id.customViewFrame),
-                                isDescendantOfA(withId(R.id.root))))))));
-    android_widget_TextView10.perform(getClickAction());
-
-    ViewInteraction android_widget_TextView11 =
-        onView(
-            allOf(
-                withId(R.id.recording),
-                withTextOrHint(equalToTrimmingAndIgnoringCase("Stop")),
-                isVisible(),
-                isDescendantOfA(
-                    allOf(
-                        withId(R.id.attachment_dialog_root),
-                        isDescendantOfA(
-                            allOf(
-                                withId(R.id.customViewFrame),
-                                isDescendantOfA(withId(R.id.root))))))));
-    android_widget_TextView11.perform(getClickAction());
+//    ViewInteraction android_widget_TextView6 =
+//        onView(
+//            allOf(
+//                withId(R.id.recording),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("Record")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(
+//                        withId(R.id.attachment_dialog_root),
+//                        isDescendantOfA(
+//                            allOf(
+//                                withId(R.id.customViewFrame),
+//                                isDescendantOfA(withId(R.id.root))))))));
+//    android_widget_TextView6.perform(getClickAction());
+//
+//    ViewInteraction android_widget_TextView7 =
+//        onView(
+//            allOf(
+//                withId(R.id.timestamp),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("Timestamp")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(
+//                        withId(R.id.attachment_dialog_root),
+//                        isDescendantOfA(
+//                            allOf(
+//                                withId(R.id.customViewFrame),
+//                                isDescendantOfA(withId(R.id.root))))))));
+//    android_widget_TextView7.perform(getClickAction());
+//
+//    ViewInteraction android_widget_TextView8 =
+//        onView(
+//            allOf(
+//                withId(R.id.location),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("Location")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(
+//                        withId(R.id.attachment_dialog_root),
+//                        isDescendantOfA(
+//                            allOf(
+//                                withId(R.id.customViewFrame),
+//                                isDescendantOfA(withId(R.id.root))))))));
+//    android_widget_TextView8.perform(getClickAction());
+//
+//    ViewInteraction android_widget_EditText3 =
+//        onView(
+//            allOf(
+//                withId(R.id.auto_complete_location),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("Search location")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(withId(R.id.customViewFrame), isDescendantOfA(withId(R.id.root))))));
+//    android_widget_EditText3.perform(replaceText("reperusal"));
+//
+//    ViewInteraction android_widget_EditText4 =
+//        onView(
+//            allOf(
+//                withId(R.id.auto_complete_location),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("reperusal")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(withId(R.id.customViewFrame), isDescendantOfA(withId(R.id.root))))));
+//    android_widget_EditText4.perform(replaceText("dozen"));
+//
+//    ViewInteraction android_widget_TextView9 =
+//        onView(
+//            allOf(
+//                withId(R.id.buttonDefaultPositive),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("CONFIRM")),
+//                isVisible(),
+//                isDescendantOfA(withId(R.id.root))));
+//    android_widget_TextView9.perform(getClickAction());
+//
+//    ViewInteraction android_widget_TextView10 =
+//        onView(
+//            allOf(
+//                withId(R.id.timestamp),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("Timestamp")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(
+//                        withId(R.id.attachment_dialog_root),
+//                        isDescendantOfA(
+//                            allOf(
+//                                withId(R.id.customViewFrame),
+//                                isDescendantOfA(withId(R.id.root))))))));
+//    android_widget_TextView10.perform(getClickAction());
+//
+//    ViewInteraction android_widget_TextView11 =
+//        onView(
+//            allOf(
+//                withId(R.id.recording),
+//                withTextOrHint(equalToTrimmingAndIgnoringCase("Stop")),
+//                isVisible(),
+//                isDescendantOfA(
+//                    allOf(
+//                        withId(R.id.attachment_dialog_root),
+//                        isDescendantOfA(
+//                            allOf(
+//                                withId(R.id.customViewFrame),
+//                                isDescendantOfA(withId(R.id.root))))))));
+//    android_widget_TextView11.perform(getClickAction());
 
     ViewInteraction android_widget_ImageView6 =
         onView(

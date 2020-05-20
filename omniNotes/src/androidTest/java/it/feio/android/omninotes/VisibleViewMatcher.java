@@ -2,12 +2,12 @@ package it.feio.android.omninotes;
 
 import android.view.View;
 
-import android.support.test.espresso.matcher.ViewMatchers.Visibility;
+import androidx.test.espresso.matcher.ViewMatchers.Visibility;
 
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
 
-import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
+import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
 
 /**
  * Custom ViewMatcher to match a view that has a "Visible" state but that is not necessarily displayed to the user.
